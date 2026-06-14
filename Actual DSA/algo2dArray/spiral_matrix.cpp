@@ -15,10 +15,16 @@ void spiral_matrix(int arr[][4], int m, int n){
         }
         // bottom
         for(int i=ecol-1;i>=scol;i--){
+            if(srow==erow){
+                break;
+            }
             cout<<arr[erow][i]<<" ";
         }
         // left
         for(int j=erow-1;j>=srow+1;j--){
+             if(scol==ecol){
+                break;
+            }
             cout<<arr[j][scol]<<" ";
         }
         srow++,erow--;
