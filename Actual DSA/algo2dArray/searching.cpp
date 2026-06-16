@@ -9,7 +9,7 @@ int bruteSearch(int arr[][4],int m,int n,int key){              // O(m x n)
             }
         }
     }
-    return -1;
+    cout<<"not found"<<endl;
 }
 
 int binarySearch(int arr[][4], int m, int n, int key){          // O(n x logm)
@@ -27,10 +27,10 @@ int binarySearch(int arr[][4], int m, int n, int key){          // O(n x logm)
             }
         }
     }
-    return -1;
+    cout<<"not found"<<endl;
 }
 
-int staircaseSearch(int arr[][4], int m, int n, int key){
+int staircaseSearch(int arr[][4], int m, int n, int key){       // O(n + m)
         int row=0,col=n-1;
         while(row<m && col>=0){
             if(arr[row][col] == key){
@@ -42,11 +42,11 @@ int staircaseSearch(int arr[][4], int m, int n, int key){
                 col--;
             }
         }
-        return -1;
+        cout<<"not found"<<endl;
     }
 int main(){
     int m=5,n=4;
-    int key = 44;
+    int key = 12;
     int arr[5][4]={{10,20,30,40},
                     {15,25,35,45},
                     {27,29,37,48},
